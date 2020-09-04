@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <div class="radar">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="{{ data.viewbox }}">
+      <circle class="center" r="0.5" cx="{{ data.center.x }}" cy="{{ data.center.y }}"></circle>
+      <circle
+        class="bounding-circle"
+        r="{{ data.max_radius }}"
+        cx="{{ data.center.x }}"
+        cy="{{ data.center.y }}">
+      </circle>
+
+      {% for q in data.quarters %}
+        <line
+          class="line"
+          x1="{{ data.center.x }}"
+          y1="{{ data.center.y }}"
+          x2="{{ q.x }}"
+          y2="{{ q.y }}">
+        </line>
+      {% endfor %}
+    </svg>
+  </div>
+
+{% endblock %}

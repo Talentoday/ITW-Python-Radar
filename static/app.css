@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .radar {
+  width: 50%;
+}
+
+.radar .center {
+  fill: red;
+}
+
+.radar .bounding-circle {
+  fill: none;
+  stroke: red;
+  stroke-width: 0.1;
+}
+
+.radar .line {
+  stroke: red;
+  stroke-width: 0.1;
+}
+
+.radar .sector {
+  stroke-width: 0.1;
+  stroke: blue;
+}
+
+.radar .sector__1 { fill: yellow; }
+.radar .sector__2 { fill: olive; }
+.radar .sector__3 { fill: teal; }
+.radar .sector__4 { fill: navy; }
